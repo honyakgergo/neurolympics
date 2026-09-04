@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FullscreenButton } from "./components/Fullscreen.jsx";
 import { IconCollect, IconConnect, IconSync, IconMath, IconOdds, IconSeq, IconCascade, IconRegimes } from "./components/Icons.jsx";
 import { ResultsScreen } from "./components/ResultsScreen.jsx";
 import { BeatTheOdds } from "./games/BeatTheOdds.jsx";
@@ -94,20 +95,23 @@ export default function Hub(){
   };
 
   return(
-    <div style={{minHeight:"100vh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"26px 16px"}}>
+    <div style={{minHeight:"100dvh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"26px 16px"}}>
       <div style={{maxWidth:530,width:"100%"}}>
         <div style={{marginBottom:26,display:"flex",alignItems:"center",justifyContent:"space-between",gap:12}}>
           <div>
             <h1 style={{fontSize:25,fontWeight:700,color:C.text,margin:"0 0 4px",letterSpacing:0.2}}>NeurOlympics</h1>
             <p style={{color:C.muted,fontSize:11,margin:0,letterSpacing:1.3,fontWeight:600}}>COGNITIVE ASSESSMENT</p>
           </div>
-          <button onClick={()=>setView("profile")}
-            onPointerEnter={e=>{e.currentTarget.style.borderColor=C.hover;e.currentTarget.style.color=C.text;}}
-            onPointerLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.color=C.muted;}}
-            style={{background:C.surface,border:`1px solid ${C.border}`,color:C.muted,borderRadius:11,padding:"0 18px",
-              height:46,fontSize:13,fontWeight:600,cursor:"pointer",touchAction:"manipulation",whiteSpace:"nowrap",transition:"border-color .15s,color .15s"}}>
-            Brain map
-          </button>
+          <div style={{display:"flex",alignItems:"center",gap:8,flexShrink:0}}>
+            <FullscreenButton/>
+            <button onClick={()=>setView("profile")}
+              onPointerEnter={e=>{e.currentTarget.style.borderColor=C.hover;e.currentTarget.style.color=C.text;}}
+              onPointerLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.color=C.muted;}}
+              style={{background:C.surface,border:`1px solid ${C.border}`,color:C.muted,borderRadius:11,padding:"0 18px",
+                height:46,fontSize:13,fontWeight:600,cursor:"pointer",touchAction:"manipulation",whiteSpace:"nowrap",transition:"border-color .15s,color .15s"}}>
+              Brain map
+            </button>
+          </div>
         </div>
         {SECTIONS.map(sec=>(
           <div key={sec.label} style={{marginBottom:24}}>

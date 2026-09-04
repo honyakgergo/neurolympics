@@ -135,7 +135,7 @@ export function BrainProfile({onBack}){
   const heading=t=>(<p style={{color:C.faint,fontSize:10,letterSpacing:1.6,fontWeight:700,margin:"0 0 12px"}}>{t}</p>);
 
   return(
-    <div style={{minHeight:"100vh",background:C.bg,fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"18px 14px 40px"}}>
+    <div style={{minHeight:"100dvh",background:C.bg,fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"18px 14px 40px"}}>
       <div style={{maxWidth:690,margin:"0 auto"}}>
         <div style={{marginBottom:20}}>
           <ExitBar title="Brain map" subtitle="LATEST SESSION PER GAME" onBack={onBack} backLabel="Hub"/>

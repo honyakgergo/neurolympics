@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { C } from "../lib/theme.js";
+import { FullscreenButton } from "./Fullscreen.jsx";
 
 // Pause overlay. Exiting is a two-step confirm, because leaving mid-run throws
 // the session away and that should never happen by accident.
@@ -20,6 +21,7 @@ export function PauseOverlay({ onResume, onHub, warnOnExit=true }) {
           <p style={{color:C.text,fontSize:17,fontWeight:700,margin:"0 0 22px"}}>Session on hold</p>
           <div style={{display:"flex",flexDirection:"column",gap:10}}>
             <button onClick={onResume} style={btn(true)}>Resume</button>
+            <FullscreenButton variant="wide"/>
             <button onClick={()=>warnOnExit?setConfirming(true):onHub()} style={btn(false)}>Exit to hub</button>
           </div>
           <p style={{color:C.faint,fontSize:11,margin:"18px 0 0"}}>Esc also resumes</p>

@@ -152,7 +152,7 @@ export function Cascade({onBack,onFinish}){
   useEffect(()=>()=>clear(),[]);
 
   const shell=(children,center)=>(
-    <div style={{minHeight:"100vh",background:C.bg,fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"18px 14px 34px",display:"flex",justifyContent:"center",alignItems:center?"center":"flex-start"}}>
+    <div style={{minHeight:"100dvh",background:C.bg,fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"18px 14px 34px",display:"flex",justifyContent:"center",alignItems:center?"center":"flex-start"}}>
       <div style={{maxWidth:520,width:"100%",display:"flex",flexDirection:"column",gap:16,alignItems:"center"}}>{children}</div>
     </div>
   );

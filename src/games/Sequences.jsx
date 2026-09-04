@@ -137,7 +137,7 @@ export function Sequences({onBack,onFinish}){
   }
   useEffect(()=>()=>{clearInterval(timerRef.current);clearTimeout(advTimer.current);},[]);
 
-  const wrap=ch=>(<div style={{minHeight:"100vh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20}}><div style={{maxWidth:460,width:"100%",textAlign:"center"}}>{ch}</div></div>);
+  const wrap=ch=>(<div style={{minHeight:"100dvh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20}}><div style={{maxWidth:460,width:"100%",textAlign:"center"}}>{ch}</div></div>);
 
   if(screen==="intro")return wrap(<>
     <div style={{display:"flex",justifyContent:"center",marginBottom:14}}><IconSeq size={56}/></div>
@@ -153,7 +153,7 @@ export function Sequences({onBack,onFinish}){
   </>);
 
   if(screen==="playing"&&question)return(
-    <div style={{minHeight:"100vh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:16,gap:16}}>
+    <div style={{minHeight:"100dvh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:16,gap:16}}>
       <div style={{display:"flex",gap:18,alignItems:"center",flexWrap:"wrap",justifyContent:"center"}}>
         {[{label:"NET",value:score,color:score<0?C.red:C.accent},{label:"Q",value:`${Math.min(qNum+1,SEQ_TOTAL)}/${SEQ_TOTAL}`,color:C.text},{label:"RIGHT",value:correct,color:C.green},{label:"WRONG",value:wrong,color:C.red},{label:"SKIP",value:skipped,color:C.muted}].map(s=>(
           <div key={s.label} style={{textAlign:"center"}}><div style={{color:C.faint,fontSize:9,letterSpacing:1.2,fontWeight:600}}>{s.label}</div><div style={{color:s.color,fontWeight:700,fontSize:18}}>{s.value}</div></div>

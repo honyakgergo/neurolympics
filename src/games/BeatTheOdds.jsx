@@ -90,7 +90,7 @@ export function BeatTheOdds({onBack,onFinish}){
   function skipQ(){ if(feedback)return; st.current.skipped++; nextQ(); }
   useEffect(()=>()=>clearInterval(timerRef.current),[]);
 
-  const wrap=ch=>(<div style={{minHeight:"100vh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20}}><div style={{maxWidth:520,width:"100%",textAlign:"center"}}>{ch}</div></div>);
+  const wrap=ch=>(<div style={{minHeight:"100dvh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20}}><div style={{maxWidth:520,width:"100%",textAlign:"center"}}>{ch}</div></div>);
 
   if(screen==="intro")return wrap(<>
     <div style={{display:"flex",justifyContent:"center",marginBottom:14}}><IconOdds size={56}/></div>
@@ -106,7 +106,7 @@ export function BeatTheOdds({onBack,onFinish}){
   </>);
 
   if(screen==="playing"&&question)return(
-    <div style={{minHeight:"100vh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20,gap:18}}>
+    <div style={{minHeight:"100dvh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20,gap:18}}>
       <div style={{display:"flex",gap:22,alignItems:"center",flexWrap:"wrap",justifyContent:"center"}}>
         {[{label:"SCORE",value:score,color:score<0?C.red:C.accent},{label:"DONE",value:answered,color:C.text},{label:"RIGHT",value:correct,color:C.green},{label:"WRONG",value:wrong,color:C.red}].map(s=>(<div key={s.label} style={{textAlign:"center"}}><div style={{color:C.faint,fontSize:9,letterSpacing:1.2,fontWeight:600}}>{s.label}</div><div style={{color:s.color,fontWeight:700,fontSize:18}}>{s.value}</div></div>))}
         <div style={{textAlign:"center"}}><div style={{color:C.faint,fontSize:9,letterSpacing:1.2,fontWeight:600}}>TIME</div><div style={{color:timeLeft<=30?C.red:C.text,fontWeight:700,fontSize:18}}>{Math.floor(timeLeft/60)}:{String(timeLeft%60).padStart(2,"0")}</div></div>

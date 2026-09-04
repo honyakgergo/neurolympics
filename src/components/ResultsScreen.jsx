@@ -6,7 +6,7 @@ export function ResultsScreen({game,result,prevBest,onBack}){
   const improved=prevBest!==null&&result.score>prevBest;
   const diff=prevBest!==null?result.score-prevBest:null;
   return(
-    <div style={{minHeight:"100vh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20}}>
+    <div style={{minHeight:"100dvh",background:C.bg,display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:20}}>
       <div style={{maxWidth:400,width:"100%",textAlign:"center"}}>
         <p style={{color:C.faint,fontSize:10,letterSpacing:2,fontWeight:700,marginBottom:8}}>{game.name.toUpperCase()}</p>
         <h2 style={{color:C.text,fontSize:23,fontWeight:700,margin:"0 0 4px"}}>Session complete</h2>

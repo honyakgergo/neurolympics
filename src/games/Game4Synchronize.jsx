@@ -178,7 +178,7 @@ export function Game4({onBack,onFinish}){
   // ── Desktop: the original fixed board, unchanged.
   return(
     <LandscapeGuard>
-      <div style={{minHeight:"100vh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,gap:14,padding:20,userSelect:"none"}}>
+      <div style={{minHeight:"100dvh",background:C.bg,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:C.text,gap:14,padding:20,userSelect:"none"}}>
         {paused&&<PauseOverlay onResume={()=>{pausedRef.current=false;setPaused(false);}} onHub={onBack}/>}
         <div style={{width:G.W}}>
           <GameBar label="SYNCHRONIZE" onPause={pause} stats={stats}/>

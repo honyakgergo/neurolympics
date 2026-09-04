@@ -101,7 +101,7 @@ export function Regimes({onBack}){
   const[read,setRead]=useState(readIds());
 
   const shell=(children,center)=>(
-    <div style={{minHeight:"100vh",background:C.bg,fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"18px 14px 40px",display:"flex",justifyContent:"center",alignItems:center?"center":"flex-start"}}>
+    <div style={{minHeight:"100dvh",background:C.bg,fontFamily:"'Segoe UI',sans-serif",color:C.text,padding:"18px 14px 40px",display:"flex",justifyContent:"center",alignItems:center?"center":"flex-start"}}>
       <div style={{maxWidth:600,width:"100%",display:"flex",flexDirection:"column",gap:14,alignItems:"center"}}>{children}</div>
     </div>
   );

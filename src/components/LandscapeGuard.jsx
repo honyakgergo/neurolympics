@@ -23,7 +23,7 @@ export function LandscapeGuard({ children }) {
   }, []);
   if (!portrait) return children;
   return (
-    <div style={{minHeight:"100vh",background:"#080b12",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:"#e8ecf5",padding:32,textAlign:"center",gap:14}}>
+    <div style={{minHeight:"100dvh",background:"#080b12",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"'Segoe UI',sans-serif",color:"#e8ecf5",padding:32,textAlign:"center",gap:14}}>
       <svg width={64} height={64} viewBox="0 0 64 64">
         <rect x={5} y={12} width={40} height={28} rx={5} fill="none" stroke="#5ecef7" strokeWidth={2.5}/>
         <path d="M50 22 L59 32 L50 42" fill="none" stroke="#5ecef7" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"/>

@@ -3,6 +3,14 @@
   margin: 0;
   padding: 0;
 }
+html, body, #root {
+  min-height: 100%;
+}
 body {
   background: #080b12;
+  /* Every screen is tap-driven, so pull-to-refresh and rubber-banding are only
+     ever a way to lose a run by accident. */
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
